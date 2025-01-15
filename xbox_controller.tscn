@@ -1,0 +1,196 @@
+[gd_scene load_steps=32 format=3 uid="uid://dhtuckwxnb748"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_f6hyo"]
+[ext_resource type="Texture2D" uid="uid://cjewlflwwku7m" path="res://assets/xbox/xbox-controller-clipart-xl.png" id="2_s5fub"]
+[ext_resource type="Texture2D" uid="uid://dwunoy7i72dme" path="res://assets/xbox/xbox_button_color_a_outline.png" id="3_k3dpk"]
+[ext_resource type="Texture2D" uid="uid://do34ify45pi2v" path="res://assets/xbox/xbox_button_color_a.png" id="4_m48hr"]
+[ext_resource type="Texture2D" uid="uid://yvjh1ghjxdcg" path="res://assets/xbox/xbox_button_color_b_outline.png" id="5_i6sdi"]
+[ext_resource type="Texture2D" uid="uid://ctu7n60bcfua8" path="res://assets/xbox/xbox_button_color_b.png" id="6_5ehlj"]
+[ext_resource type="Texture2D" uid="uid://cbei4br6vcyif" path="res://assets/xbox/xbox_button_color_x_outline.png" id="7_fh8he"]
+[ext_resource type="Texture2D" uid="uid://s2rdohn5ets4" path="res://assets/xbox/xbox_button_color_x.png" id="8_dfr7i"]
+[ext_resource type="Texture2D" uid="uid://cadbnn4bpvsh6" path="res://assets/xbox/xbox_button_color_y_outline.png" id="9_3ltd8"]
+[ext_resource type="Texture2D" uid="uid://c83tcv11morsb" path="res://assets/xbox/xbox_button_color_y.png" id="10_olbq2"]
+[ext_resource type="Texture2D" uid="uid://cs7cyll0qx5ky" path="res://assets/xbox/xbox_button_menu_outline.png" id="11_i5ixe"]
+[ext_resource type="Texture2D" uid="uid://bi154lfbfil7h" path="res://assets/xbox/xbox_button_menu.png" id="12_kcup3"]
+[ext_resource type="Texture2D" uid="uid://78iimn6t4mf2" path="res://assets/xbox/xbox_button_view_outline.png" id="13_u2u40"]
+[ext_resource type="Texture2D" uid="uid://dgovkugf86rn2" path="res://assets/xbox/xbox_button_view.png" id="14_cdnfi"]
+[ext_resource type="Texture2D" uid="uid://cevt68smhja83" path="res://assets/xbox/xbox_lb_outline.png" id="15_vjxs8"]
+[ext_resource type="Texture2D" uid="uid://cvvunbrpl40ny" path="res://assets/xbox/xbox_lb.png" id="16_ysxv4"]
+[ext_resource type="Texture2D" uid="uid://v7i3qrny1jqh" path="res://assets/xbox/xbox_lt_outline.png" id="17_wgxyb"]
+[ext_resource type="Texture2D" uid="uid://38osv5qp80g" path="res://assets/xbox/xbox_lt.png" id="18_hg13s"]
+[ext_resource type="Texture2D" uid="uid://cnhwtoq4l6sx7" path="res://assets/xbox/xbox_rb_outline.png" id="19_m1xps"]
+[ext_resource type="Texture2D" uid="uid://cuv2urg30arjb" path="res://assets/xbox/xbox_rb.png" id="20_gyxvi"]
+[ext_resource type="Texture2D" uid="uid://comhd04kevxcr" path="res://assets/xbox/xbox_rt_outline.png" id="21_7ceev"]
+[ext_resource type="Texture2D" uid="uid://qeu06jeolhum" path="res://assets/xbox/xbox_rt.png" id="22_03g5u"]
+[ext_resource type="Texture2D" uid="uid://bu5whtdyu6mx4" path="res://assets/xbox/xbox_dpad_none.png" id="23_0pcxg"]
+[ext_resource type="Texture2D" uid="uid://idf1t0n3nscd" path="res://assets/xbox/xbox_dpad_up_outline.png" id="24_dk38p"]
+[ext_resource type="Texture2D" uid="uid://cnhs3dtjuknkm" path="res://assets/xbox/xbox_dpad_down_outline.png" id="25_ya7fd"]
+[ext_resource type="Texture2D" uid="uid://b5q3txe7nblwd" path="res://assets/xbox/xbox_dpad_left_outline.png" id="26_plxla"]
+[ext_resource type="Texture2D" uid="uid://dmchte72vpse5" path="res://assets/xbox/xbox_dpad_right_outline.png" id="27_mdsnx"]
+[ext_resource type="Texture2D" uid="uid://b7o83htqivdsr" path="res://assets/xbox/xbox_ls_outline.png" id="28_omr64"]
+[ext_resource type="Texture2D" uid="uid://c24aaif3e8gxn" path="res://assets/xbox/xbox_ls.png" id="29_wvqur"]
+[ext_resource type="Texture2D" uid="uid://hx3cy7m3dhvr" path="res://assets/xbox/xbox_rs_outline.png" id="30_riwpk"]
+[ext_resource type="Texture2D" uid="uid://70n11qsvrp3" path="res://assets/xbox/xbox_rs.png" id="31_po5h6"]
+
+[node name="XBoxController" type="Node2D"]
+script = ExtResource("1_f6hyo")
+
+[node name="BaseImage" type="Sprite2D" parent="."]
+position = Vector2(117, 34)
+scale = Vector2(0.359636, 0.359636)
+texture = ExtResource("2_s5fub")
+centered = false
+
+[node name="Button_A" type="Node2D" parent="."]
+position = Vector2(636.3, 213.5)
+scale = Vector2(0.5, 0.5)
+
+[node name="Off" type="Sprite2D" parent="Button_A"]
+texture = ExtResource("3_k3dpk")
+
+[node name="On" type="Sprite2D" parent="Button_A"]
+visible = false
+texture = ExtResource("4_m48hr")
+
+[node name="Button_B" type="Node2D" parent="."]
+position = Vector2(685, 169.5)
+scale = Vector2(0.5, 0.5)
+
+[node name="Off" type="Sprite2D" parent="Button_B"]
+texture = ExtResource("5_i6sdi")
+
+[node name="On" type="Sprite2D" parent="Button_B"]
+visible = false
+texture = ExtResource("6_5ehlj")
+
+[node name="Button_X" type="Node2D" parent="."]
+position = Vector2(588, 167)
+scale = Vector2(0.5, 0.5)
+
+[node name="Off" type="Sprite2D" parent="Button_X"]
+texture = ExtResource("7_fh8he")
+
+[node name="On" type="Sprite2D" parent="Button_X"]
+visible = false
+texture = ExtResource("8_dfr7i")
+
+[node name="Button_Y" type="Node2D" parent="."]
+position = Vector2(636.5, 120)
+scale = Vector2(0.5, 0.5)
+
+[node name="Off" type="Sprite2D" parent="Button_Y"]
+texture = ExtResource("9_3ltd8")
+
+[node name="On" type="Sprite2D" parent="Button_Y"]
+visible = false
+texture = ExtResource("10_olbq2")
+
+[node name="Button_Menu" type="Node2D" parent="."]
+position = Vector2(509, 165.5)
+scale = Vector2(0.3, 0.3)
+
+[node name="Off" type="Sprite2D" parent="Button_Menu"]
+texture = ExtResource("11_i5ixe")
+
+[node name="On" type="Sprite2D" parent="Button_Menu"]
+visible = false
+texture = ExtResource("12_kcup3")
+
+[node name="Button_View" type="Node2D" parent="."]
+position = Vector2(406.5, 165.5)
+scale = Vector2(0.3, 0.3)
+
+[node name="Off" type="Sprite2D" parent="Button_View"]
+texture = ExtResource("13_u2u40")
+
+[node name="On" type="Sprite2D" parent="Button_View"]
+visible = false
+texture = ExtResource("14_cdnfi")
+
+[node name="Button_LB" type="Node2D" parent="."]
+position = Vector2(275, 66)
+scale = Vector2(0.6, 0.6)
+
+[node name="Off" type="Sprite2D" parent="Button_LB"]
+texture = ExtResource("15_vjxs8")
+
+[node name="On" type="Sprite2D" parent="Button_LB"]
+visible = false
+texture = ExtResource("16_ysxv4")
+
+[node name="LeftTrigger" type="Node2D" parent="."]
+position = Vector2(345, 66)
+scale = Vector2(0.7, 0.7)
+
+[node name="Off" type="Sprite2D" parent="LeftTrigger"]
+texture = ExtResource("17_wgxyb")
+
+[node name="On" type="Sprite2D" parent="LeftTrigger"]
+visible = false
+texture = ExtResource("18_hg13s")
+
+[node name="Button_RB" type="Node2D" parent="."]
+position = Vector2(647, 66)
+scale = Vector2(0.6, 0.6)
+
+[node name="Off" type="Sprite2D" parent="Button_RB"]
+texture = ExtResource("19_m1xps")
+
+[node name="On" type="Sprite2D" parent="Button_RB"]
+visible = false
+texture = ExtResource("20_gyxvi")
+
+[node name="RightTrigger" type="Node2D" parent="."]
+position = Vector2(577, 66)
+scale = Vector2(0.7, 0.7)
+
+[node name="Off" type="Sprite2D" parent="RightTrigger"]
+texture = ExtResource("21_7ceev")
+
+[node name="On" type="Sprite2D" parent="RightTrigger"]
+visible = false
+texture = ExtResource("22_03g5u")
+
+[node name="Button_DPAD" type="Node2D" parent="."]
+position = Vector2(367, 277.5)
+
+[node name="Off" type="Sprite2D" parent="Button_DPAD"]
+texture = ExtResource("23_0pcxg")
+
+[node name="Up" type="Sprite2D" parent="Button_DPAD"]
+visible = false
+texture = ExtResource("24_dk38p")
+
+[node name="Down" type="Sprite2D" parent="Button_DPAD"]
+visible = false
+texture = ExtResource("25_ya7fd")
+
+[node name="Left" type="Sprite2D" parent="Button_DPAD"]
+visible = false
+texture = ExtResource("26_plxla")
+
+[node name="Right" type="Sprite2D" parent="Button_DPAD"]
+visible = false
+texture = ExtResource("27_mdsnx")
+
+[node name="LeftStick" type="Node2D" parent="."]
+position = Vector2(284, 161)
+scale = Vector2(0.75, 0.75)
+
+[node name="Off" type="Sprite2D" parent="LeftStick"]
+texture = ExtResource("28_omr64")
+
+[node name="On" type="Sprite2D" parent="LeftStick"]
+visible = false
+texture = ExtResource("29_wvqur")
+
+[node name="RightStick" type="Node2D" parent="."]
+position = Vector2(549, 271)
+scale = Vector2(0.75, 0.75)
+
+[node name="Off" type="Sprite2D" parent="RightStick"]
+texture = ExtResource("30_riwpk")
+
+[node name="On" type="Sprite2D" parent="RightStick"]
+visible = false
+texture = ExtResource("31_po5h6")

@@ -4,13 +4,13 @@ extends Node2D
 func _ready() -> void:
 	pass # Replace with function body.
 
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventJoypadButton:
 		button_event(event)
 	elif event is InputEventJoypadMotion:
 		motion_event(event)
-	else:
-		print(event.as_text())
+
 
 func button_event(event: InputEventJoypadButton) -> void:
 	var on := event.pressed
@@ -63,6 +63,8 @@ func button_event(event: InputEventJoypadButton) -> void:
 @onready var right_stick_y: float = $RightStick.position.y
 
 func motion_event(event: InputEventJoypadMotion) -> void:
+	var on := event.axis_value >= 0.5
+	var off := !on
 	match event.axis:
 		JoyAxis.JOY_AXIS_LEFT_X:
 			$LeftStick.position.x = left_stick_x + (event.axis_value * 20)
@@ -72,6 +74,12 @@ func motion_event(event: InputEventJoypadMotion) -> void:
 			$RightStick.position.x = right_stick_x + (event.axis_value * 20)
 		JoyAxis.JOY_AXIS_RIGHT_Y:
 			$RightStick.position.y = right_stick_y + (event.axis_value * 20)
+		JoyAxis.JOY_AXIS_TRIGGER_RIGHT:
+			$RightTrigger/Off.visible = off
+			$RightTrigger/On.visible = on
+		JoyAxis.JOY_AXIS_TRIGGER_LEFT:
+			$LeftTrigger/Off.visible = off
+			$LeftTrigger/On.visible = on
 
 
 # Called every frame. 'delta' is the elapViewed time since the previous frame.
