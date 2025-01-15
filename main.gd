@@ -1,8 +1,11 @@
 extends Node2D
 
+var dummy := Object.new()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	# force rendering to continue even when minimized
+	DisplayServer.register_additional_output(dummy)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -80,8 +83,3 @@ func motion_event(event: InputEventJoypadMotion) -> void:
 		JoyAxis.JOY_AXIS_TRIGGER_LEFT:
 			$LeftTrigger/Off.visible = off
 			$LeftTrigger/On.visible = on
-
-
-# Called every frame. 'delta' is the elapViewed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
