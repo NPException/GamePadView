@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://qpwwv1vfi336"]
+[gd_scene load_steps=28 format=3 uid="uid://qpwwv1vfi336"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_d8pky"]
 [ext_resource type="Texture2D" uid="uid://cjewlflwwku7m" path="res://assets/xbox/xbox-controller-clipart-xl.png" id="2_7sby0"]
@@ -23,6 +23,10 @@
 [ext_resource type="Texture2D" uid="uid://cnhs3dtjuknkm" path="res://assets/xbox/xbox_dpad_down_outline.png" id="21_w3ovj"]
 [ext_resource type="Texture2D" uid="uid://b5q3txe7nblwd" path="res://assets/xbox/xbox_dpad_left_outline.png" id="22_pn4qn"]
 [ext_resource type="Texture2D" uid="uid://dmchte72vpse5" path="res://assets/xbox/xbox_dpad_right_outline.png" id="23_7y5qb"]
+[ext_resource type="Texture2D" uid="uid://b7o83htqivdsr" path="res://assets/xbox/xbox_ls_outline.png" id="24_cpkr7"]
+[ext_resource type="Texture2D" uid="uid://c24aaif3e8gxn" path="res://assets/xbox/xbox_ls.png" id="25_8tg22"]
+[ext_resource type="Texture2D" uid="uid://hx3cy7m3dhvr" path="res://assets/xbox/xbox_rs_outline.png" id="26_awljd"]
+[ext_resource type="Texture2D" uid="uid://70n11qsvrp3" path="res://assets/xbox/xbox_rs.png" id="27_skk5v"]
 
 [node name="XBoxController" type="Node2D"]
 script = ExtResource("1_d8pky")
@@ -142,3 +146,25 @@ texture = ExtResource("22_pn4qn")
 [node name="Right" type="Sprite2D" parent="Button_DPAD"]
 visible = false
 texture = ExtResource("23_7y5qb")
+
+[node name="LeftStick" type="Node2D" parent="."]
+position = Vector2(306, 160)
+scale = Vector2(0.75, 0.75)
+
+[node name="Off" type="Sprite2D" parent="LeftStick"]
+texture = ExtResource("24_cpkr7")
+
+[node name="On" type="Sprite2D" parent="LeftStick"]
+visible = false
+texture = ExtResource("25_8tg22")
+
+[node name="RightStick" type="Node2D" parent="."]
+position = Vector2(571, 270)
+scale = Vector2(0.75, 0.75)
+
+[node name="Off" type="Sprite2D" parent="RightStick"]
+texture = ExtResource("26_awljd")
+
+[node name="On" type="Sprite2D" parent="RightStick"]
+visible = false
+texture = ExtResource("27_skk5v")
