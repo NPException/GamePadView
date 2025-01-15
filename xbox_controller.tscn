@@ -35,162 +35,175 @@
 [node name="XBoxController" type="Node2D"]
 script = ExtResource("1_f6hyo")
 
-[node name="BaseImage" type="Sprite2D" parent="."]
-position = Vector2(117, 34)
+[node name="Base" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 scale = Vector2(0.359636, 0.359636)
 texture = ExtResource("2_s5fub")
-centered = false
 
-[node name="Button_A" type="Node2D" parent="."]
-position = Vector2(636.3, 213.5)
-scale = Vector2(0.5, 0.5)
+[node name="Button_A" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(484.657, -159.884)
+scale = Vector2(1.39029, 1.39029)
 
-[node name="Off" type="Sprite2D" parent="Button_A"]
+[node name="Off" type="Sprite2D" parent="Base/Button_A"]
 texture = ExtResource("3_k3dpk")
 
-[node name="On" type="Sprite2D" parent="Button_A"]
+[node name="On" type="Sprite2D" parent="Base/Button_A"]
 visible = false
 texture = ExtResource("4_m48hr")
 
-[node name="Button_B" type="Node2D" parent="."]
-position = Vector2(685, 169.5)
-scale = Vector2(0.5, 0.5)
+[node name="Button_B" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(620.071, -282.23)
+scale = Vector2(1.39029, 1.39029)
 
-[node name="Off" type="Sprite2D" parent="Button_B"]
+[node name="Off" type="Sprite2D" parent="Base/Button_B"]
 texture = ExtResource("5_i6sdi")
 
-[node name="On" type="Sprite2D" parent="Button_B"]
+[node name="On" type="Sprite2D" parent="Base/Button_B"]
 visible = false
 texture = ExtResource("6_5ehlj")
 
-[node name="Button_X" type="Node2D" parent="."]
-position = Vector2(588, 167)
-scale = Vector2(0.5, 0.5)
+[node name="Button_X" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(350.354, -289.181)
+scale = Vector2(1.39029, 1.39029)
 
-[node name="Off" type="Sprite2D" parent="Button_X"]
+[node name="Off" type="Sprite2D" parent="Base/Button_X"]
 texture = ExtResource("7_fh8he")
 
-[node name="On" type="Sprite2D" parent="Button_X"]
+[node name="On" type="Sprite2D" parent="Base/Button_X"]
 visible = false
 texture = ExtResource("8_dfr7i")
 
-[node name="Button_Y" type="Node2D" parent="."]
-position = Vector2(636.5, 120)
-scale = Vector2(0.5, 0.5)
+[node name="Button_Y" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(485.213, -419.869)
+scale = Vector2(1.39029, 1.39029)
 
-[node name="Off" type="Sprite2D" parent="Button_Y"]
+[node name="Off" type="Sprite2D" parent="Base/Button_Y"]
 texture = ExtResource("9_3ltd8")
 
-[node name="On" type="Sprite2D" parent="Button_Y"]
+[node name="On" type="Sprite2D" parent="Base/Button_Y"]
 visible = false
 texture = ExtResource("10_olbq2")
 
-[node name="Button_Menu" type="Node2D" parent="."]
-position = Vector2(509, 165.5)
-scale = Vector2(0.3, 0.3)
+[node name="Button_Menu" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(130.688, -293.352)
+scale = Vector2(0.834177, 0.834177)
 
-[node name="Off" type="Sprite2D" parent="Button_Menu"]
+[node name="Off" type="Sprite2D" parent="Base/Button_Menu"]
 texture = ExtResource("11_i5ixe")
 
-[node name="On" type="Sprite2D" parent="Button_Menu"]
+[node name="On" type="Sprite2D" parent="Base/Button_Menu"]
 visible = false
 texture = ExtResource("12_kcup3")
 
-[node name="Button_View" type="Node2D" parent="."]
-position = Vector2(406.5, 165.5)
-scale = Vector2(0.3, 0.3)
+[node name="Button_View" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(-154.323, -293.352)
+scale = Vector2(0.834177, 0.834177)
 
-[node name="Off" type="Sprite2D" parent="Button_View"]
+[node name="Off" type="Sprite2D" parent="Base/Button_View"]
 texture = ExtResource("13_u2u40")
 
-[node name="On" type="Sprite2D" parent="Button_View"]
+[node name="On" type="Sprite2D" parent="Base/Button_View"]
 visible = false
 texture = ExtResource("14_cdnfi")
 
-[node name="Button_LB" type="Node2D" parent="."]
-position = Vector2(275, 66)
-scale = Vector2(0.6, 0.6)
+[node name="Button_LB" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(-519.97, -570.021)
+scale = Vector2(1.66835, 1.66835)
 
-[node name="Off" type="Sprite2D" parent="Button_LB"]
+[node name="Off" type="Sprite2D" parent="Base/Button_LB"]
 texture = ExtResource("15_vjxs8")
 
-[node name="On" type="Sprite2D" parent="Button_LB"]
+[node name="On" type="Sprite2D" parent="Base/Button_LB"]
 visible = false
 texture = ExtResource("16_ysxv4")
 
-[node name="LeftTrigger" type="Node2D" parent="."]
-position = Vector2(345, 66)
-scale = Vector2(0.7, 0.7)
+[node name="LeftTrigger" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(-325.329, -570.021)
+scale = Vector2(1.94641, 1.94641)
 
-[node name="Off" type="Sprite2D" parent="LeftTrigger"]
+[node name="Off" type="Sprite2D" parent="Base/LeftTrigger"]
 texture = ExtResource("17_wgxyb")
 
-[node name="On" type="Sprite2D" parent="LeftTrigger"]
+[node name="On" type="Sprite2D" parent="Base/LeftTrigger"]
 visible = false
 texture = ExtResource("18_hg13s")
 
-[node name="Button_RB" type="Node2D" parent="."]
-position = Vector2(647, 66)
-scale = Vector2(0.6, 0.6)
+[node name="Button_RB" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(514.409, -570.021)
+scale = Vector2(1.66835, 1.66835)
 
-[node name="Off" type="Sprite2D" parent="Button_RB"]
+[node name="Off" type="Sprite2D" parent="Base/Button_RB"]
 texture = ExtResource("19_m1xps")
 
-[node name="On" type="Sprite2D" parent="Button_RB"]
+[node name="On" type="Sprite2D" parent="Base/Button_RB"]
 visible = false
 texture = ExtResource("20_gyxvi")
 
-[node name="RightTrigger" type="Node2D" parent="."]
-position = Vector2(577, 66)
-scale = Vector2(0.7, 0.7)
+[node name="RightTrigger" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(319.768, -570.021)
+scale = Vector2(1.94641, 1.94641)
 
-[node name="Off" type="Sprite2D" parent="RightTrigger"]
+[node name="Off" type="Sprite2D" parent="Base/RightTrigger"]
 texture = ExtResource("21_7ceev")
 
-[node name="On" type="Sprite2D" parent="RightTrigger"]
+[node name="On" type="Sprite2D" parent="Base/RightTrigger"]
 visible = false
 texture = ExtResource("22_03g5u")
 
-[node name="Button_DPAD" type="Node2D" parent="."]
-position = Vector2(367, 277.5)
+[node name="Button_DPAD" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(-264.156, 18.0738)
+scale = Vector2(2.78059, 2.78059)
 
-[node name="Off" type="Sprite2D" parent="Button_DPAD"]
+[node name="Off" type="Sprite2D" parent="Base/Button_DPAD"]
 texture = ExtResource("23_0pcxg")
 
-[node name="Up" type="Sprite2D" parent="Button_DPAD"]
+[node name="Up" type="Sprite2D" parent="Base/Button_DPAD"]
 visible = false
 texture = ExtResource("24_dk38p")
 
-[node name="Down" type="Sprite2D" parent="Button_DPAD"]
+[node name="Down" type="Sprite2D" parent="Base/Button_DPAD"]
 visible = false
 texture = ExtResource("25_ya7fd")
 
-[node name="Left" type="Sprite2D" parent="Button_DPAD"]
+[node name="Left" type="Sprite2D" parent="Base/Button_DPAD"]
 visible = false
 texture = ExtResource("26_plxla")
 
-[node name="Right" type="Sprite2D" parent="Button_DPAD"]
+[node name="Right" type="Sprite2D" parent="Base/Button_DPAD"]
 visible = false
 texture = ExtResource("27_mdsnx")
 
-[node name="LeftStick" type="Node2D" parent="."]
-position = Vector2(284, 161)
-scale = Vector2(0.75, 0.75)
+[node name="LeftStick" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(-494.945, -305.865)
+scale = Vector2(2.08544, 2.08544)
 
-[node name="Off" type="Sprite2D" parent="LeftStick"]
+[node name="Off" type="Sprite2D" parent="Base/LeftStick"]
 texture = ExtResource("28_omr64")
 
-[node name="On" type="Sprite2D" parent="LeftStick"]
+[node name="On" type="Sprite2D" parent="Base/LeftStick"]
 visible = false
 texture = ExtResource("29_wvqur")
 
-[node name="RightStick" type="Node2D" parent="."]
-position = Vector2(549, 271)
-scale = Vector2(0.75, 0.75)
+[node name="RightStick" type="Node2D" parent="Base"]
+unique_name_in_owner = true
+position = Vector2(241.911, 6.10352e-05)
+scale = Vector2(2.08544, 2.08544)
 
-[node name="Off" type="Sprite2D" parent="RightStick"]
+[node name="Off" type="Sprite2D" parent="Base/RightStick"]
 texture = ExtResource("30_riwpk")
 
-[node name="On" type="Sprite2D" parent="RightStick"]
+[node name="On" type="Sprite2D" parent="Base/RightStick"]
 visible = false
 texture = ExtResource("31_po5h6")
