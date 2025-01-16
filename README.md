@@ -1,5 +1,9 @@
 # NP GamePadView
 
+![image](https://github.com/user-attachments/assets/9399f574-d7df-42d6-9521-83a91e8dc8b9)
+
+## Usage
+
 To use this in OBS, I recommend you use the [Spout2 OBS plugin](https://github.com/Off-World-Live/obs-spout2-plugin) if you're on Windows.
 If you have it installed, just add a new "Spout2 Capture" to your sources, select the gamepadviewer, and set "Composite Mode" to default:
 
