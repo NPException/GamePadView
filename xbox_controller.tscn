@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dhtuckwxnb748"]
+[gd_scene load_steps=34 format=3 uid="uid://dhtuckwxnb748"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_f6hyo"]
 [ext_resource type="Texture2D" uid="uid://cjewlflwwku7m" path="res://assets/xbox/xbox-controller-clipart-xl.png" id="2_s5fub"]
@@ -16,12 +16,14 @@
 [ext_resource type="Texture2D" uid="uid://dgovkugf86rn2" path="res://assets/xbox/xbox_button_view.png" id="14_cdnfi"]
 [ext_resource type="Texture2D" uid="uid://cevt68smhja83" path="res://assets/xbox/xbox_lb_outline.png" id="15_vjxs8"]
 [ext_resource type="Texture2D" uid="uid://cvvunbrpl40ny" path="res://assets/xbox/xbox_lb.png" id="16_ysxv4"]
+[ext_resource type="Texture2D" uid="uid://chgplphun42xi" path="res://assets/xbox/xbox_lt_bg.png" id="17_sdb51"]
 [ext_resource type="Texture2D" uid="uid://v7i3qrny1jqh" path="res://assets/xbox/xbox_lt_outline.png" id="17_wgxyb"]
 [ext_resource type="Texture2D" uid="uid://38osv5qp80g" path="res://assets/xbox/xbox_lt.png" id="18_hg13s"]
 [ext_resource type="Texture2D" uid="uid://cnhwtoq4l6sx7" path="res://assets/xbox/xbox_rb_outline.png" id="19_m1xps"]
 [ext_resource type="Texture2D" uid="uid://cuv2urg30arjb" path="res://assets/xbox/xbox_rb.png" id="20_gyxvi"]
 [ext_resource type="Texture2D" uid="uid://comhd04kevxcr" path="res://assets/xbox/xbox_rt_outline.png" id="21_7ceev"]
 [ext_resource type="Texture2D" uid="uid://qeu06jeolhum" path="res://assets/xbox/xbox_rt.png" id="22_03g5u"]
+[ext_resource type="Texture2D" uid="uid://dcb1rgof01smg" path="res://assets/xbox/xbox_rt_bg.png" id="22_q8r1u"]
 [ext_resource type="Texture2D" uid="uid://bu5whtdyu6mx4" path="res://assets/xbox/xbox_dpad_none.png" id="23_0pcxg"]
 [ext_resource type="Texture2D" uid="uid://idf1t0n3nscd" path="res://assets/xbox/xbox_dpad_up_outline.png" id="24_dk38p"]
 [ext_resource type="Texture2D" uid="uid://cnhs3dtjuknkm" path="res://assets/xbox/xbox_dpad_down_outline.png" id="25_ya7fd"]
@@ -114,8 +116,8 @@ texture = ExtResource("14_cdnfi")
 
 [node name="Button_LB" type="Node2D" parent="Base"]
 unique_name_in_owner = true
-position = Vector2(-519.97, -570.021)
-scale = Vector2(1.66835, 1.66835)
+position = Vector2(-408.747, -570.021)
+scale = Vector2(1.75, 1.75)
 
 [node name="Off" type="Sprite2D" parent="Base/Button_LB"]
 texture = ExtResource("15_vjxs8")
@@ -126,8 +128,11 @@ texture = ExtResource("16_ysxv4")
 
 [node name="LeftTrigger" type="Node2D" parent="Base"]
 unique_name_in_owner = true
-position = Vector2(-325.329, -570.021)
-scale = Vector2(1.94641, 1.94641)
+position = Vector2(-408.747, -728.514)
+scale = Vector2(1.75, 1.75)
+
+[node name="Background" type="Sprite2D" parent="Base/LeftTrigger"]
+texture = ExtResource("17_sdb51")
 
 [node name="Off" type="Sprite2D" parent="Base/LeftTrigger"]
 texture = ExtResource("17_wgxyb")
@@ -138,8 +143,8 @@ texture = ExtResource("18_hg13s")
 
 [node name="Button_RB" type="Node2D" parent="Base"]
 unique_name_in_owner = true
-position = Vector2(514.409, -570.021)
-scale = Vector2(1.66835, 1.66835)
+position = Vector2(403.185, -570.021)
+scale = Vector2(1.75, 1.75)
 
 [node name="Off" type="Sprite2D" parent="Base/Button_RB"]
 texture = ExtResource("19_m1xps")
@@ -150,8 +155,11 @@ texture = ExtResource("20_gyxvi")
 
 [node name="RightTrigger" type="Node2D" parent="Base"]
 unique_name_in_owner = true
-position = Vector2(319.768, -570.021)
-scale = Vector2(1.94641, 1.94641)
+position = Vector2(403.185, -728.514)
+scale = Vector2(1.75, 1.75)
+
+[node name="Background" type="Sprite2D" parent="Base/RightTrigger"]
+texture = ExtResource("22_q8r1u")
 
 [node name="Off" type="Sprite2D" parent="Base/RightTrigger"]
 texture = ExtResource("21_7ceev")

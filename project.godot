@@ -23,7 +23,7 @@ gdscript/warnings/untyped_declaration=2
 [display]
 
 window/size/viewport_width=960
-window/size/viewport_height=540
+window/size/viewport_height=800
 
 [file_customization]
 
