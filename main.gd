@@ -1,11 +1,20 @@
 extends Node2D
 
 var dummy := Object.new()
+@onready var window: Window = get_tree().get_root()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# force rendering to continue even when minimized
 	DisplayServer.register_additional_output(dummy)
+
+
+func _notification(what: int) -> void:
+	# set background to transparent when we lose focus, so that OBS Game Capture can use transparency
+	if what == NOTIFICATION_APPLICATION_FOCUS_OUT:
+		window.transparent_bg = true
+	elif what == NOTIFICATION_APPLICATION_FOCUS_IN:
+		window.transparent_bg = false
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -35,7 +44,6 @@ func check_konami_code(button : JoyButton) -> void:
 	if button != konami_code[matchIndex]:
 		matchIndex = 0
 	else:
-		print(button)
 		matchIndex += 1
 		# check if done
 		if matchIndex == konami_code.size():
