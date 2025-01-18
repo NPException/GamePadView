@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dhtuckwxnb748"]
+[gd_scene load_steps=34 format=3 uid="uid://dhtuckwxnb748"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_f6hyo"]
 [ext_resource type="Texture2D" uid="uid://cjewlflwwku7m" path="res://assets/xbox/xbox-controller-clipart-xl.png" id="2_s5fub"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://cuv8vcve4mqm4" path="res://assets/xbox/xbox_stick_outline.png" id="30_ikdpx"]
 [ext_resource type="Texture2D" uid="uid://dnkto2p7om3i5" path="res://assets/xbox/xbox_stick.png" id="31_2i6is"]
 [ext_resource type="Texture2D" uid="uid://8wnm47oblc3q" path="res://assets/HUGEFRAUD-4x.png" id="32_2opno"]
+[ext_resource type="Texture2D" uid="uid://dfhhc0sbojxu3" path="res://assets/MAN-4x.png" id="32_qeoeq"]
 
 [node name="XBoxController" type="Node2D"]
 script = ExtResource("1_f6hyo")
@@ -238,6 +239,12 @@ texture = ExtResource("30_ikdpx")
 [node name="On" type="Sprite2D" parent="Base/RightStick"]
 visible = false
 texture = ExtResource("31_2i6is")
+
+[node name="ManImage" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+scale = Vector2(1.77344, 1.77344)
+texture = ExtResource("32_qeoeq")
 
 [node name="HugeFraudImage" type="Sprite2D" parent="."]
 unique_name_in_owner = true

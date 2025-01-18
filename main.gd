@@ -15,7 +15,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		motion_event(event)
 
 # Up, Up, Down, Down, Left, Right, Left, Right, B, A, Start
-var konami : Array[JoyButton] = [
+var konami_code : Array[JoyButton] = [
 	JOY_BUTTON_DPAD_UP,
 	JOY_BUTTON_DPAD_UP,
 	JOY_BUTTON_DPAD_DOWN,
@@ -31,27 +31,27 @@ var konami : Array[JoyButton] = [
 
 var matchIndex := 0
 
-func checkKonami(button : JoyButton) -> void:
-	if button != konami[matchIndex]:
+func check_konami_code(button : JoyButton) -> void:
+	if button != konami_code[matchIndex]:
 		matchIndex = 0
 	else:
 		print(button)
 		matchIndex += 1
 		# check if done
-		if matchIndex == konami.size():
+		if matchIndex == konami_code.size():
 			matchIndex = 0
 			%HugeFraudImage.visible = true
 			await get_tree().create_timer(3.0).timeout # waits for 1 second
 			%HugeFraudImage.visible = false
 
 
+func check_man() -> void:
+	%ManImage.visible = %LeftStick/On.visible && %RightStick/On.visible
+
 
 func button_event(event: InputEventJoypadButton) -> void:
 	var on := event.pressed
 	var off := !on
-	
-	if off:
-		checkKonami(event.button_index)
 	
 	match event.button_index:
 		JOY_BUTTON_A:
@@ -92,6 +92,10 @@ func button_event(event: InputEventJoypadButton) -> void:
 			%Button_DPAD/Left.visible = on
 		JOY_BUTTON_DPAD_RIGHT:
 			%Button_DPAD/Right.visible = on
+	# easter eggs
+	if off:
+		check_konami_code(event.button_index)
+	check_man()
 
 
 @onready var left_stick_x: float = %LeftStick.position.x
