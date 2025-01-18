@@ -139,6 +139,19 @@ texture = ExtResource("17_wgxyb")
 visible = false
 texture = ExtResource("18_hg13s")
 
+[node name="Bar" type="TextureProgressBar" parent="Base/LeftTrigger"]
+offset_left = -63.5561
+offset_top = -63.5566
+offset_right = 64.4439
+offset_bottom = 64.4434
+size_flags_horizontal = 4
+min_value = -20.0
+max_value = 120.0
+value = 100.0
+rounded = true
+fill_mode = 3
+texture_progress = ExtResource("18_hg13s")
+
 [node name="Button_RB" type="Node2D" parent="Base"]
 unique_name_in_owner = true
 position = Vector2(403.185, -570.021)
@@ -165,6 +178,18 @@ texture = ExtResource("21_7ceev")
 [node name="On" type="Sprite2D" parent="Base/RightTrigger"]
 visible = false
 texture = ExtResource("22_03g5u")
+
+[node name="Bar" type="TextureProgressBar" parent="Base/RightTrigger"]
+offset_left = -63.5561
+offset_top = -63.5566
+offset_right = 64.4439
+offset_bottom = 64.4434
+size_flags_horizontal = 4
+min_value = -20.0
+max_value = 120.0
+rounded = true
+fill_mode = 3
+texture_progress = ExtResource("22_03g5u")
 
 [node name="Button_DPAD" type="Node2D" parent="Base"]
 unique_name_in_owner = true

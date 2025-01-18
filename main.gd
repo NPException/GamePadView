@@ -66,8 +66,8 @@ func button_event(event: InputEventJoypadButton) -> void:
 @onready var right_stick_y: float = %RightStick.position.y
 
 func motion_event(event: InputEventJoypadMotion) -> void:
-	var on := event.axis_value >= 0.5
-	var off := !on
+	# var on := event.axis_value >= 0.5
+	# var off := !on
 	match event.axis:
 		JoyAxis.JOY_AXIS_LEFT_X:
 			%LeftStick.position.x = left_stick_x + (event.axis_value * 70)
@@ -78,8 +78,10 @@ func motion_event(event: InputEventJoypadMotion) -> void:
 		JoyAxis.JOY_AXIS_RIGHT_Y:
 			%RightStick.position.y = right_stick_y + (event.axis_value * 70)
 		JoyAxis.JOY_AXIS_TRIGGER_RIGHT:
-			%RightTrigger/Off.visible = off
-			%RightTrigger/On.visible = on
+			# %RightTrigger/Off.visible = off
+			# %RightTrigger/On.visible = on
+			%RightTrigger/Bar.set_value_no_signal(event.axis_value * 100)
 		JoyAxis.JOY_AXIS_TRIGGER_LEFT:
-			%LeftTrigger/Off.visible = off
-			%LeftTrigger/On.visible = on
+			# %LeftTrigger/Off.visible = off
+			# %LeftTrigger/On.visible = on
+			%LeftTrigger/Bar.set_value_no_signal(event.axis_value * 100)
