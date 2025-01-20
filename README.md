@@ -7,11 +7,14 @@ In the future I want to make it entirely configureable, so people can use their 
 
 ## Usage
 
+### Option A
+
 To use this in OBS, I recommend you use the [Spout2 OBS plugin](https://github.com/Off-World-Live/obs-spout2-plugin) if you're on Windows.
 If you have it installed, just add a new "Spout2 Capture" to your sources, select the gamepadviewer, and set "Composite Mode" to default:
 
 ![image](https://github.com/user-attachments/assets/c20a09e8-4682-4802-9f67-02e6141f7932)
 
+### Option B
 If you do not have the Spout plugin, you can still add it as a "Game Capture".
 In this case, you need to check "Allow Transparency" in the source properties.
 That way the window background will be recognized by OBS as transparent, when the GamepadViewer not the focused window.
