@@ -3,6 +3,8 @@ extends Node2D
 var dummy := Object.new()
 @onready var window: Window = get_tree().get_root()
 
+@onready var is_rick_mode := OS.has_feature("rick_mode") || OS.is_debug_build()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# force rendering to continue even when minimized
@@ -101,9 +103,10 @@ func button_event(event: InputEventJoypadButton) -> void:
 		JOY_BUTTON_DPAD_RIGHT:
 			%Button_DPAD/Right.visible = on
 	# easter eggs
-	if off:
-		check_konami_code(event.button_index)
-	check_man()
+	if is_rick_mode:
+		if off:
+			check_konami_code(event.button_index)
+		check_man()
 
 
 @onready var left_stick_x: float = %LeftStick.position.x
