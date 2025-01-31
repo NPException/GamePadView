@@ -17,7 +17,7 @@ If you have it installed, just add a new "Spout2 Capture" to your sources, selec
 ### Option B
 If you do not have the Spout plugin, you can still add it as a "Game Capture".
 In this case, you need to check "Allow Transparency" in the source properties.
-That way the window background will be recognized by OBS as transparent, when the GamepadViewer not the focused window.
+That way the window background will be recognized by OBS as transparent, when the GamepadViewer is not the focused window.
 
 ![image](https://github.com/user-attachments/assets/479e342b-e880-42d7-9a18-e572ecd801ad)
 
