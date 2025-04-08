@@ -11,11 +11,15 @@ config_version=5
 [application]
 
 config/name="NP GamepadViewer"
-config/version="0.2.4"
+config/version="0.2.5"
 run/main_scene="res://main.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 run/max_fps=60
 config/icon="res://assets/xbox/controller_xboxone.png"
+
+[autoload]
+
+DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 
 [debug]
 
@@ -25,7 +29,13 @@ gdscript/warnings/untyped_declaration=1
 
 window/size/viewport_width=960
 window/size/viewport_height=800
+window/size/resizable=false
 window/per_pixel_transparency/allowed=true
+window/vsync/vsync_mode=0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg")
 
 [file_customization]
 

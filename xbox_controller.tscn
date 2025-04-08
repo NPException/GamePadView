@@ -1,6 +1,6 @@
 [gd_scene load_steps=34 format=3 uid="uid://dhtuckwxnb748"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_f6hyo"]
+[ext_resource type="Script" uid="uid://puo5o31oac8h" path="res://main.gd" id="1_f6hyo"]
 [ext_resource type="Texture2D" uid="uid://cjewlflwwku7m" path="res://assets/xbox/xbox-controller-clipart-xl.png" id="2_s5fub"]
 [ext_resource type="Texture2D" uid="uid://dwunoy7i72dme" path="res://assets/xbox/xbox_button_color_a_outline.png" id="3_k3dpk"]
 [ext_resource type="Texture2D" uid="uid://do34ify45pi2v" path="res://assets/xbox/xbox_button_color_a.png" id="4_m48hr"]
@@ -251,3 +251,9 @@ unique_name_in_owner = true
 visible = false
 scale = Vector2(3, 3)
 texture = ExtResource("32_2opno")
+
+[node name="InvisibleImage" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+visibility_layer = 0
+texture = ExtResource("32_qeoeq")

@@ -3,12 +3,22 @@ extends Node2D
 var dummy := Object.new()
 @onready var window: Window = get_tree().get_root()
 
-@onready var is_rick_mode := OS.has_feature("rick_mode") || OS.is_debug_build()
+var dual_sticks_image : Sprite2D
+var konami_image : Sprite2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# force rendering to continue even when minimized
 	DisplayServer.register_additional_output(dummy)
+	
+	# TODO: try to load images from install folder instead
+	if OS.has_feature("rick_mode") || OS.is_debug_build():
+		dual_sticks_image = %ManImage
+		konami_image = %HugeFraudImage
+	else:
+		dual_sticks_image = %InvisibleImage
+		konami_image = %InvisibleImage
 
 
 func _notification(what: int) -> void:
@@ -24,6 +34,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		button_event(event)
 	elif event is InputEventJoypadMotion:
 		motion_event(event)
+	get_viewport().set_input_as_handled()
 
 # Up, Up, Down, Down, Left, Right, Left, Right, B, A, Start
 var konami_code : Array[JoyButton] = [
@@ -50,13 +61,13 @@ func check_konami_code(button : JoyButton) -> void:
 		# check if done
 		if matchIndex == konami_code.size():
 			matchIndex = 0
-			%HugeFraudImage.visible = true
-			await get_tree().create_timer(3.0).timeout # waits for 1 second
-			%HugeFraudImage.visible = false
+			konami_image.visible = true
+			await get_tree().create_timer(3.0).timeout # waits for 3 seconds
+			konami_image.visible = false
 
 
-func check_man() -> void:
-	%ManImage.visible = %LeftStick/On.visible && %RightStick/On.visible
+func check_dual_sticks() -> void:
+	dual_sticks_image.visible = %LeftStick/On.visible && %RightStick/On.visible
 
 
 func button_event(event: InputEventJoypadButton) -> void:
@@ -103,10 +114,9 @@ func button_event(event: InputEventJoypadButton) -> void:
 		JOY_BUTTON_DPAD_RIGHT:
 			%Button_DPAD/Right.visible = on
 	# easter eggs
-	if is_rick_mode:
-		if off:
-			check_konami_code(event.button_index)
-		check_man()
+	if off:
+		check_konami_code(event.button_index)
+	check_dual_sticks()
 
 
 @onready var left_stick_x: float = %LeftStick.position.x
