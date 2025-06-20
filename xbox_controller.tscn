@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dhtuckwxnb748"]
+[gd_scene load_steps=36 format=3 uid="uid://dhtuckwxnb748"]
 
 [ext_resource type="Script" uid="uid://puo5o31oac8h" path="res://main.gd" id="1_f6hyo"]
 [ext_resource type="Texture2D" uid="uid://cjewlflwwku7m" path="res://assets/xbox/xbox-controller-clipart-xl.png" id="2_s5fub"]
@@ -33,6 +33,8 @@
 [ext_resource type="Texture2D" uid="uid://dnkto2p7om3i5" path="res://assets/xbox/xbox_stick.png" id="31_2i6is"]
 [ext_resource type="Texture2D" uid="uid://8wnm47oblc3q" path="res://assets/HUGEFRAUD-4x.png" id="32_2opno"]
 [ext_resource type="Texture2D" uid="uid://dfhhc0sbojxu3" path="res://assets/MAN-4x.png" id="32_qeoeq"]
+[ext_resource type="Texture2D" uid="uid://cyollo2ficmnv" path="res://assets/DUDE-4x.png" id="34_r7t8g"]
+[ext_resource type="Script" uid="uid://vitutnswd4kn" path="res://scroll_text.gd" id="35_5xijq"]
 
 [node name="XBoxController" type="Node2D"]
 script = ExtResource("1_f6hyo")
@@ -257,3 +259,63 @@ unique_name_in_owner = true
 visible = false
 visibility_layer = 0
 texture = ExtResource("32_qeoeq")
+
+[node name="DudeImage" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+scale = Vector2(1.77344, 1.77344)
+texture = ExtResource("34_r7t8g")
+
+[node name="ScrollText" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 46.0
+offset_top = -322.0
+offset_right = 242.0
+offset_bottom = 47.0
+color = Color(0, 0, 0, 0)
+script = ExtResource("35_5xijq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollText"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/bold_italics_font_size = 26
+theme_override_font_sizes/italics_font_size = 26
+theme_override_font_sizes/mono_font_size = 26
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 525.0
+offset_top = -1357.0
+offset_right = 1537.0
+offset_bottom = 22625.0
+theme_override_font_sizes/bold_italics_font_size = 26
+theme_override_font_sizes/italics_font_size = 26
+theme_override_font_sizes/mono_font_size = 26
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/bold_font_size = 26
+bbcode_enabled = true
+text = "[outline_color=BLACK][outline_size=10][shake][b]I do not believe[/b][/shake] that it is [i]statistically possible[/i] to get [b]every[/b] [color=GOLD][wave]golden strawberry[/wave][/color] without using [color=DODGER_BLUE]assist mode[/color], or [color=LIME_GREEN]cheating[/color] in some way. I kinda think that [color=HOT_PINK]Maddy Thorson[/color] was trolling us by putting these [color=GOLD][wave]strawberries[/wave][/color] in the game, and having [shake]no way to tell[/shake] if someone is using [color=DODGER_BLUE]assist mode[/color] just by looking at the screen footage. I think [color=HOT_PINK]she[/color] knows full well that it's [shake]impossible[/shake], and the whole thing is little more than a [i][pulse color=#11ffdd40]social experiment[/pulse][/i] to see how many people will [color=LIME_GREEN]cheat[/color] and then try to pass their work off as [rainbow]legitimate[/rainbow]. There is no achievement or reward for getting these [color=GOLD][wave]strawberries[/wave][/color]. You don't unlock a special ending where Theo chips a tooth on the [color=GOLD][wave]gold strawberries[/wave][/color] in your pie. You do get a stamp of a [color=GOLD][wave]gold strawberry[/wave][/color] on your save file if you succeed in getting all 25 [color=GOLD][wave]gold strawberries[/wave][/color]. But PC players have already learned to [shake]hack[/shake] their save slot to [shake]manipulate[/shake] these stamps - including removing the [color=DODGER_BLUE]assist[/color] stamp.
+
+Certain [color=RED]youtubers[/color] who shall remain [wave]nameless[/wave] claim to have gotten every [color=GOLD][wave]golden strawberry[/wave][/color] [rainbow]legitimately[/rainbow] within a week of the game's release - even going so far as to say that it was [wave][color=PINK]fairly easy[/color][/wave] to do compared to other games they've played. Having [i]carefully[/i] inspected their videos and held [b]extensive[/b] conversations with them and hearing their [tornado]conflicting stories[/tornado] about why they were [wave]forced[/wave] to use an [color=DODGER_BLUE]assist mode[/color] enabled save to make their videos, but did not have an [color=DODGER_BLUE]assist mode[/color] enabled save slot to show at the beginning of the videos, I am [shake][b]100% certain[/b][/shake] that these are [color=LIME_GREEN]doctored[/color] videos made by [pulse]nerdowells[/pulse].
+
+That's not to say these [shake]people[/shake] aren't good at the game. Even making a [color=LIME_GREEN]doctored[/color] video to look like you got the [color=GOLD][wave]gold strawberries[/wave][/color] without [color=LIME_GREEN]cheating[/color] requires a [rainbow]tremendous[/rainbow] amount of skill at the game. Please do not take this as a [wave]personal attack[/wave] against anyone for their videos. Rather, consider this a [b]cautionary note[/b] to you. Do not take these videos as [rainbow]proof[/rainbow] that it's possible to get these [color=GOLD][wave]strawberries[/wave][/color] and decide that [i]you too[/i] are going to accomplish this, because if [color=RED]soandsoyoutuber[/color] can do it, so can you. I have yet to see a [rainbow]legitimate[/rainbow] video that convinces me that it's possible. In the [wave]hunt for clicks and subscribers[/wave], [color=RED]youtubers[/color] sometimes [shake][b]deceive[/b][/shake] their audiences and end up wasting their time.
+
+If you're going to attempt these [color=GOLD][wave]golden strawberries[/wave][/color] - understand that if you want [rainbow][b]recognition[/b][/rainbow] for the feat, you're going to have to [shake]make [b]sure[/b][/shake] that you have [rainbow]proof[/rainbow] that you're [shake]not [color=LIME_GREEN]cheating[/color][/shake]. If you're just doing this for your own [wave][color=PALE_GREEN]personal sense of self-satisfaction[/color][/wave] that's great. But nobody is going to [shake]believe[/shake] that you got [b]all[/b] the [color=GOLD][wave]gold strawberries[/wave][/color] if you tell them that you did. [shake]Don't even attempt[/shake] to tell people you [rainbow]accomplished[/rainbow] this unless you have [b]video[/b] to back it up. [b]Do not[/b] play on an [color=DODGER_BLUE]assist mode[/color] enabled save slot, and then [wave]expect[/wave] people to believe that you just didn't use any [color=DODGER_BLUE]assist options[/color]. Play on a non-[color=DODGER_BLUE]assist[/color] enabled save slot, [pulse][b]or don't bother[/b][/pulse]. Show the [b][i]full[/i][/b] experience, from [color=MAGENTA]title[/color] [color=MEDIUM_ORCHID]screen[/color] [color=MEDIUM_PURPLE]to[/color] [color=SLATE_BLUE]level[/color]. Play with the game clock [b]turned on[/b]. Pause the game [wave]on occasion[/wave] so that people can see that you [shake]don't[/shake] have [color=DODGER_BLUE]assist mode[/color] available in your options. Play with the original [rainbow]music[/rainbow] on. Don't make up [shake][b]some excuse[/b][/shake] about how you had to turn the [rainbow]music[/rainbow] off because it was [tornado]distracting[/tornado]. Anything to make it difficult to [color=LIME_GREEN]doctor[/color] the video. And [b]even that[/b] might not be enough. The only [shake]surefire[/shake] way to [rainbow]prove[/rainbow] you did this is to [color=PURPLE][b]livestream[/b][/color] your [rainbow]accomplishment[/rainbow].
+
+But [wave][i]more importantly[/i][/wave] - think [i]long[/i] and [b]hard[/b] before you [shake]even [b]attempt[/b][/shake] this. Is it [tornado]really [color=GOLD]worth[/color][/tornado] it? People aren't going to [pulse]believe[/pulse] you unless you show [rainbow]proof[/rainbow], and that [rainbow]proof[/rainbow] is going to be [shake]difficult[/shake] to produce. You're [wave]unlikely[/wave] to be able to monetize a [rainbow]legitimate[/rainbow] video because it will contain [shake]copyrighted[/shake] [rainbow]music[/rainbow]. You're not going to make [color=YELLOW_GREEN]money[/color] doing this.
+
+Don't let an [wave]ambitious[/wave] [color=RED]youtuber[/color] vying for clicks [shake]trick[/shake] you into [b]wasting[/b] your time. Understand [b]before[/b] you begin that it's probably an [shake][b]impossible[/b][/shake] [color=GOLD]feat[/color]. If you understand this and you [b]still[/b] want to go for it - [tornado]good luck[/tornado]. I sincerely hope you can [rainbow]prove[/rainbow] me wrong.
+"
+fit_content = true
+horizontal_alignment = 1

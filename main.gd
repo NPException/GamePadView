@@ -3,9 +3,12 @@ extends Node2D
 var dummy := Object.new()
 @onready var window: Window = get_tree().get_root()
 
-var dual_sticks_image : Sprite2D
-var konami_image : Sprite2D
+@onready var dual_sticks_image : Sprite2D = %InvisibleImage
+@onready var lb_dual_sticks_image : Sprite2D = %InvisibleImage
+@onready var konami_image : Sprite2D = %InvisibleImage
 
+var rb_dual_sticks_function := func () -> void:
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,10 +18,9 @@ func _ready() -> void:
 	# TODO: try to load images from install folder instead
 	if OS.has_feature("rick_mode") || OS.is_debug_build():
 		dual_sticks_image = %ManImage
+		lb_dual_sticks_image = %DudeImage
 		konami_image = %HugeFraudImage
-	else:
-		dual_sticks_image = %InvisibleImage
-		konami_image = %InvisibleImage
+		rb_dual_sticks_function = %ScrollText.show_text
 
 
 func _notification(what: int) -> void:
@@ -67,7 +69,21 @@ func check_konami_code(button : JoyButton) -> void:
 
 
 func check_dual_sticks() -> void:
-	dual_sticks_image.visible = %LeftStick/On.visible && %RightStick/On.visible
+	dual_sticks_image.visible = false
+	lb_dual_sticks_image.visible = false
+	
+	if not (%LeftStick/On.visible && %RightStick/On.visible):
+		return
+	
+	var modifiers : Array[bool] = [%Button_LB/On.visible, %Button_RB/On.visible]
+	
+	match modifiers:
+		[false, false]:
+			dual_sticks_image.visible = true
+		[true, false]:
+			lb_dual_sticks_image.visible = true
+		[false, true]:
+			rb_dual_sticks_function.call()
 
 
 func button_event(event: InputEventJoypadButton) -> void:
